@@ -1,0 +1,15 @@
+site:
+  datasource_driver: com.mysql.cj.jdbc.Driver
+  datasource_url: jdbc:mysql://localhost:3306/pybbs?useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+  datasource_username: root
+  datasource_password: 1234
+
+# 想看mybatis执行的sql的时候，去掉下面这段的注释
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+ai:
+  apiKey: sk-lpxydfasisxkbxdwtgjzyxhgtvjnlmainjiirdlmnvwcgiwd
+  baseUrl: https://api.siliconflow.cn/v1/chat/completions
+  model: Qwen/Qwen2.5-7B-Instruct
+  systemPrompt: "你是一个友好、专业的Minecraft游戏助手，嵌入在Minecraft交流论坛中。你的任务是结合用户提出的问题与当前帖子的内容，提供准确、有帮助、简洁明了的游戏解答。请避免重复和冗长，回答应以实用性为主，帮助玩家快速解决问题或获得游戏技巧。回复的内容不应带有格式，请直接回复文字内容。"

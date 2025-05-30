@@ -1,0 +1,169 @@
+.ai-icon-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    z-index: 9999;
+    user-select: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.ai-icon-btn.hidden {
+    display: none;
+}
+
+.ai-popup-container {
+    position: fixed;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    z-index: 10000;
+    flex-direction: column;
+}
+
+.ai-popup-container.show {
+    display: flex;
+}
+
+.ai-popup-header {
+    background-color: #5988FF;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ai-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.ai-popup-content {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+.ai-input-area {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+.ai-input-area input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.ai-input-area button {
+    padding: 8px 12px;
+    background-color: #f39d14;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.user-message {
+    text-align: right;
+    margin: 5px 0;
+    color: #333;
+}
+
+.ai-message {
+    text-align: left;
+    margin: 5px 0;
+    color: #4CAF50;
+}
+
+
+/* AI聊天消息容器的基本样式 */
+#ai-messages {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* 根据需要调整内边距 */
+    /* 保留您已有的其他样式，如 overflow-y, height 等 */
+}
+
+/* 通用消息气泡样式 */
+#ai-messages .user-message,
+#ai-messages .ai-message {
+    padding: 10px 15px;
+    border-radius: 18px;
+    /* 圆角，形成气泡感 */
+    margin-bottom: 12px;
+    /* 气泡间的间距 */
+    max-width: 75%;
+    /* 气泡最大宽度，避免占满整行 */
+    word-wrap: break-word;
+    /* 长单词自动换行 */
+    line-height: 1.4;
+    /* 文本行高 */
+    animation: bubble-appear 0.4s ease-out forwards;
+    /* 应用出现动画 */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    /* 轻微阴影增加立体感 */
+}
+
+/* 用户消息气泡 (通常在右侧) */
+#ai-messages .user-message {
+    background-color: #DCF8C6;
+    /* 类似微信的用户消息绿色 */
+    color: #333;
+    margin-left: auto;
+    /* 推动到右侧 */
+    margin-right: 5px;
+    /* 与边缘的间距 */
+    border-bottom-right-radius: 6px;
+    /* 右下角稍微平一点，暗示方向 */
+}
+
+/* AI消息气泡 (通常在左侧) */
+#ai-messages .ai-message {
+    background-color: #ffffff;
+    /* AI消息白色背景 */
+    color: #333;
+    border: 1px solid #eee;
+    /* 轻微边框 */
+    margin-right: auto;
+    /* 推动到左侧 */
+    margin-left: 5px;
+    /* 与边缘的间距 */
+    border-bottom-left-radius: 6px;
+    /* 左下角稍微平一点，暗示方向 */
+}
+
+/* 气泡出现和向上移动的动画 */
+@keyframes bubble-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+        /* 从下方20px处开始，略微缩小 */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        /* 移动到原位，恢复正常大小 */
+    }
+}
