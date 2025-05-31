@@ -1,14 +1,21 @@
-> Instructions: Please mark in a conspicuous place `powered by pybbs`
+- **Frontend Address**: [http://localhost:8080/](http://localhost:8080/) — Users can register their own accounts
+- **Admin Panel Address**: [http://localhost:8080/adminlogin](http://localhost:8080/adminlogin)  
+  **Username**: `admin`  
+  **Password**: `123123`
 
-## Document
+## License
 
-[Document](https://atjiu.github.io/pybbs/)
+**Powered by pybbs**
 
-The documentation is written using the open source tool [docsify](https://docsify.js.org/#/quickstart)
+The forum is based on [pybbs](https://github.com/atjiu/pybbs)  
+The admin panel is based on [Minecraft-Rcon-Manage](https://github.com/pilgrimage233/Minecraft-Rcon-Manage)
 
-## Technology
+**License: AGPL**  
+Please comply with the open-source license for secondary development or commercial use.
 
-- Spring-Boot
+## Tech Stack
+
+- Spring Boot
 - Shiro
 - MyBatis-Plus
 - Bootstrap
@@ -19,46 +26,7 @@ The documentation is written using the open source tool [docsify](https://docsif
 - WebSocket
 - I18N
 
-## Feature
+## Modifications
 
-- This project integrates many third-party services, Such as redis, elasticsearch, websocket, etc.
-- you can use it to build your own website, or you can use it as a project to learn related technologies.
-- you can configure different third-party services on the backend.
-- You can start a website service by using maven, docker, or downloading the zip package in the release.
-- Integrated flyway makes it easy to iterate on database operations
-- I18n support, so that language is not a barrier to communication
-- The document is very detailed
-
-## Getting Started
-
-[Getting Started Document](https://atjiu.github.io/pybbs/#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)
-
-**Special thanks to github user [@zzzzbw](https://github.com/zzzzbw) for helping to develop dockerfile**
-
-## Manual package
-
-```bash
-mvn clean package
-```
-
-After the package is complete, a `pybbs.jar` file will be generated in the target directory under the project root directory, run `java -jar pybbs.jar` to start the forum service.
-
-In addition, the tar.gz file generated after manual packaging is the latest release package in the release on github. After downloading, the extracted content is the same.
-
-## Test
-
-Project test cases have not been written yet!
-
-## Feedback
-
-- [issues](https://github.com/atjiu/pybbs/issues)
-
-*Please clearly describe the problem recurring steps when asking questions*
-
-## Contribution
-
-Welcome everyone to submit issues and pr
-
-## License
-
-GNU AGPLv3
+The backend API runs on port `20001`.  
+The forum fetches data from the backend and displays it accordingly.
