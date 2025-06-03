@@ -384,3 +384,64 @@ a:hover {
     padding: 0 0px 0 15px;
     border-radius: 5px;
 }
+
+#player-popup {
+    display: none;
+    position: fixed;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    min-width: 220px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.5;
+}
+
+.btn-apply-whitelist {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-apply-whitelist:hover {
+    background-color: #218838;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-apply-whitelist i {
+    margin-right: 6px;
+}
+
+.decorated-player {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 2px 0;
+    background-color: #f0f8ff;
+    border-radius: 4px;
+    color: #007bff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.decorated-player i {
+    margin-right: 5px;
+    color: #5a5a5a;
+}
+
+.decorated-player:hover {
+    background-color: #e6f0ff;
+    color: #0056b3;
+    text-decoration: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+}
