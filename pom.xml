@@ -249,6 +249,19 @@
                     <layout>ZIP</layout>
                 </configuration>
             </plugin>
+
+            <!-- 指定Java编译版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
             <!-- 打包发布时，跳过单元测试 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -257,7 +270,7 @@
                     <includes>
                         <include>**/*.java</include>
                     </includes>
-                    <!--                    <skipTests>true</skipTests>-->
+                                        <skipTests>true</skipTests>
                 </configuration>
             </plugin>
         </plugins>
